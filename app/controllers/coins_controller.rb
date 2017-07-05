@@ -4,6 +4,6 @@ class CoinsController < ApplicationController
   end
 
   def show
-    render json: Coin.find(params[:ticker])
+    render json: Coin.find_by_ticker(params[:ticker])
   end
 end
